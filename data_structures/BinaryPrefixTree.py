@@ -8,7 +8,7 @@ class BinaryPrefixTree(object):
         self.id = 0  # nodes配列に持たせるポインタかつcnt配列のindex
 
     def insert(self, x: int) -> None:
-        """値xをO(log(30))で挿入"""
+        """値xを定数時間で挿入"""
         pt = 0
         self.elements_cnt += 1
         for i in range(self.bitlen-1, -1, -1):
@@ -21,7 +21,7 @@ class BinaryPrefixTree(object):
         self.cnt[pt] += 1
 
     def included(self, x: int) -> bool:
-        """xが含まれているかどうか調べる"""
+        """xが含まれているかどうか定数時間で調べる"""
         assert 0 <= x < 1 << self.bitlen
         pt, i = 0, self.bitlen-1
         while i >= 0:
@@ -33,7 +33,7 @@ class BinaryPrefixTree(object):
         return True
 
     def min_element(self) -> int:
-        """setに含まれる最小の値をO(log(N))で返す"""
+        """setに含まれる最小の値を定数時間で調べる"""
         pt, min_value = 0, 0
         for i in range(self.bitlen-1, -1, -1):
             min_value <<= 1
@@ -45,7 +45,7 @@ class BinaryPrefixTree(object):
         return min_value
 
     def max_element(self) -> int:
-        """setに含まれる最大の値をO(log(30))で返す"""
+        """setに含まれる最大の値を定数時間で調べる"""
         pt, max_value = 0, 0
         for i in range(self.bitlen-1, -1, -1):
             max_value <<= 1
@@ -57,7 +57,7 @@ class BinaryPrefixTree(object):
         return max_value
 
     def kth_elm(self, k: int) -> int:
-        """下からk番目(0-indexed)の要素をO(log(30))で取得"""
+        """下からk番目(0-indexed)の要素を定数時間で取得"""
         pt, ans = 0, 0
         k += 1
         assert k <= self.elements_cnt
@@ -76,7 +76,7 @@ class BinaryPrefixTree(object):
         return ans
 
     def lower_bound(self, x: int) -> int:
-        """x以上の最小要素のindex(0-indexed)をO(log(30))で返す"""
+        """x以上の最小要素のindex(0-indexed)を定数時間で返す"""
         pt, index = 0, 0
         for i in range(self.bitlen-1, -1, -1):
             ibit = x >> i & 1
@@ -97,3 +97,4 @@ if __name__ == '__main__':
     trie.max_element()  # => 7412894
     k = trie.lower_bound(100)  # k = 2
     trie.kth_elm(k)  # => 222
+    
