@@ -2,4 +2,4 @@
 UnionFind / FenwickTree / MiniHeap / MaxHeap / BinaryPrefixTree / RangeMinimumQuery / RangeSumQuery
 
 # math
-extGCD
+extGCD / Mobius(EratosthenesSieve, etc..)
