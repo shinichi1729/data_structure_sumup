@@ -1,5 +1,7 @@
-# data-structures
+# Competitive Programming Snippet in Python
+
+## data-structures
 UnionFind / FenwickTree / MiniHeap / MaxHeap / BinaryPrefixTree / RangeMinimumQuery / RangeSumQuery
 
-# math
+## math
 extGCD / Mobius(EratosthenesSieve, etc..)
