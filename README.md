@@ -1,4 +1,5 @@
 # Competitive Programming Snippet in Python
+- Input format conforms to atcoder
 
 ## data-structures
 - [UnionFind](https://github.com/shinichi1729/snippet/blob/main/data_structures/UnionFind.py)
