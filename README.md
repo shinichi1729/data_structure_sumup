@@ -16,3 +16,8 @@
 ## string
 - [RollingHash](https://github.com/shinichi1729/snippet/tree/main/string/RollingHash.py)
 - [RunLength](https://github.com/shinichi1729/snippet/tree/main/string/RunLength.py)
+
+
+## graph
+- [SCC](https://github.com/shinichi1729/snippet/blob/main/graph/SCC.py)
+- [isomorphism](https://github.com/shinichi1729/snippet/blob/main/graph/isomorphism.py)
