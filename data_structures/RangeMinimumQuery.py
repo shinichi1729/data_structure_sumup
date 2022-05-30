@@ -11,7 +11,6 @@ class RMQ(object):
         i = 1
         while self.size != (self.size | self.size >> i):
             self.size |= self.size >> i
-            print(bin(self.size))
             i *= 2
         self.size += 1
 
